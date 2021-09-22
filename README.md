@@ -53,11 +53,15 @@ This function returns a message from the designated inbox (in this case, inbox 0
 
 ## How to get the example code to work
 
-### 1. installing the NXT Software
+### The Arduino 
 
-Go to the LEGO Mindstorms [NXT Software](https://education.lego.com/en-us/downloads/retiredproducts/nxt/software) page and download the .zip file. This might take some time as it is a 782MB file for Windows. Once the file is downloaded, extract the contents of the .zip. Inside you should find an Autorun.exe. Run this (you may need administrative privileges) and follow its instructions.
+### The NXT
 
-### 2. Opening, Compiling, and Uploading the example code
+#### 1. installing the NXT Software
+
+Go to the [LEGO Mindstorms NXT Software](https://education.lego.com/en-us/downloads/retiredproducts/nxt/software) page and download the .zip file. This might take some time as it is a 782MB file for Windows. Once the file is downloaded, extract the contents of the .zip. Inside you should find an Autorun.exe. Run this (you may need administrative privileges) and follow its instructions.
+
+#### 2. Opening, Compiling, and Uploading the example code
 
 The LEGO Mindstorms NXT needs code to run. To upload the code, follow these instructions. In this example we will upload the code for _bidirectional_communication_ example, though to do the other examples, one would just go to their respective file pathways and follow the instructions using those pathways instead. 
 
@@ -66,5 +70,11 @@ The LEGO Mindstorms NXT needs code to run. To upload the code, follow these inst
 3. You should now connect you NXT to the computer via bluetooth or USB. Then select the button with a picture of a brick, it should look like the top left button in the picture below
 4. A popup menu should now appear, ensure that your NXT is turned on (there must be 6 AA batteries inside it, then you press the big orange button on the NXT and the screen should turn on) and connected to the computer via USB or paired via bluetooth. Press scan and wait. Now a list of options should appear, selct the name of your NXT and press connect.
 5. Now that you are connceted to the NXT, you can close the popup menu and then press the button resembling the bottom left button in the forementioned picture (downward pointing arrow). You should wait a bit unitl the NXT makes a beap sound a a dialog says "Completed...".
+
 ![NXT upload picture](https://github.com/Aidywady/Library-Pictures/blob/main/NXT%20upload%20picture.png)
+
 You have now successfully compiled and uploade the code to the NXT.
+
+#### 3. Initializing the bluetooth communication between the NXT and the Arduino
+
+#### 4. Running the Code
