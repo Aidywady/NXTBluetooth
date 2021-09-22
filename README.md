@@ -49,3 +49,22 @@ bluetooth.read(0, true);
 ```
 
 This function returns a message from the designated inbox (in this case, inbox 0), and can optionally delete the message once it is read. If there isn't a message in the designated inbox, the function just returns null. If the second arguement is set to true, the message is deleted after it is read, otherwise it is left as . This function takes 2 arguements **(_int_ inboxno, _bool_ delete)**.
+
+
+## How to get the example code to work
+
+### 1. installing the NXT Software
+
+Go to the LEGO Mindstorms [NXT Software](https://education.lego.com/en-us/downloads/retiredproducts/nxt/software) page and download the .zip file. This might take some time as it is a 782MB file for Windows. Once the file is downloaded, extract the contents of the .zip. Inside you should find an Autorun.exe. Run this (you may need administrative privileges) and follow its instructions.
+
+### 2. Opening, Compiling, and Uploading the example code
+
+The LEGO Mindstorms NXT needs code to run. To upload the code, follow these instructions. In this example we will upload the code for _bidirectional_communication_ example, though to do the other examples, one would just go to their respective file pathways and follow the instructions using those pathways instead. 
+
+1. Go to the _bidirectional_communication_ pathway, it should be _Documents\Arduino\libraries\NXTBluetooth\examples\bidirectional_communication_ on a windows machine.
+2. find the .rbt file and open it, it should want to be opened with the LEGO Mindstorms NXT Sofware app. If it doesn't, right click on it, select "Open with...", click "More Apps", scroll down and press "Look for another app on this PC", and then find the LEGO Mindstorms NXT .exe in the file explorer (It should be in _C:\Program Files (x86)\LEGO Software\LEGO MINDSTORMS NXT_).
+3. You should now connect you NXT to the computer via bluetooth or USB. Then select the button with a picture of a brick, it should look like the top left button in the picture below
+4. A popup menu should now appear, ensure that your NXT is turned on (there must be 6 AA batteries inside it, then you press the big orange button on the NXT and the screen should turn on) and connected to the computer via USB or paired via bluetooth. Press scan and wait. Now a list of options should appear, selct the name of your NXT and press connect.
+5. Now that you are connceted to the NXT, you can close the popup menu and then press the button resembling the bottom left button in the forementioned picture (downward pointing arrow). You should wait a bit unitl the NXT makes a beap sound a a dialog says "Completed...".
+![NXT upload picture](https://github.com/Aidywady/Library-Pictures/blob/main/NXT%20upload%20picture.png)
+You have now successfully compiled and uploade the code to the NXT.
