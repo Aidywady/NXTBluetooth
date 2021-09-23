@@ -84,7 +84,7 @@ byte NXTBluetooth::bluetoothRead()
 	{
 		return BluetoothSerial->read();
 	}
-	else return NULL;
+	else return 0x00;
 }
 
 void NXTBluetooth::bluetoothWrite(uint8_t message) 
@@ -105,8 +105,8 @@ void NXTBluetooth::bluetoothWrite(uint8_t message)
 bool NXTBluetooth::available(uint16_t inboxno) 
 {
 	// check that inboxno is within the bounds, if not, correct it
-	if (inboxno > (_noOfInboxes - 1)) inboxno = _noOfInboxes - 1;
-	else if (inboxno < 0) inboxno = 0;
+	if (inboxno > (unsigned int)(_noOfInboxes - 1)) inboxno = _noOfInboxes - 1;
+	// no need t check if inboxno is less than 0 as it is an unsigned integer
 	
 	// set the inboxno to its true location in the array 
 	inboxno *= MAILBOX_BUFFER_SIZE;
@@ -122,8 +122,8 @@ bool NXTBluetooth::available(uint16_t inboxno)
 String NXTBluetooth::read(uint16_t inboxno, bool del) 
 {
 	// check that inboxno is within the bounds, if not, correct it
-	if (inboxno > (_noOfInboxes - 1)) inboxno = _noOfInboxes - 1;
-	else if (inboxno < 0) inboxno = 0;
+	if (inboxno > (unsigned int)(_noOfInboxes - 1)) inboxno = _noOfInboxes - 1;
+	// no need t check if inboxno is less than 0 as it is an unsigned integer
 	
 	// set the inboxno to its true location in the arrays
 	inboxno *= MAILBOX_BUFFER_SIZE;
@@ -160,8 +160,8 @@ void NXTBluetooth::write(String message, uint16_t outboxno)
 	// make sure that the message is not too long (see the LEGO Mindstorms Bluetooth Developers Kit for details)
 	if (message.length()  < 59) 
 	{
-		if (outboxno > (_noOfOutboxes - 1)) outboxno = _noOfOutboxes - 1;
-		else if (outboxno < 0) outboxno = 0;
+		if (outboxno > (unsigned int)(_noOfOutboxes - 1)) outboxno = _noOfOutboxes - 1;
+		// no need t check if outboxno is less than 0 as it is an unsigned integer
 		
 		// set the outboxno to its true location in the array
 		outboxno *= MAILBOX_BUFFER_SIZE;
@@ -230,7 +230,7 @@ void NXTBluetooth::update()
 		}
 		
 		// if we received the full message (i.e. it is not corrupted)
-		if (currentbyte = messagelength) 
+		if (currentbyte == messagelength) 
 		{
 			// if the secend byte is the write message command (see the LEGO Mindstorms Bluetooth Developers Kit for details about these commands)
 			if (temporarymessage[1] == WRITE_REQUEST) 
