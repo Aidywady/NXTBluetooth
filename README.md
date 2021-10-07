@@ -55,7 +55,7 @@ This function returns a message from the designated inbox (in this case, inbox 0
 
 ### The Arduino
 
-_apologies, this is still a work in progress. It should be finished by 26/09/2021._
+_apologies, this is still a work in progress. It should be finished by 01/11/2021._
 
 ### The NXT
 
@@ -79,8 +79,8 @@ You have now successfully compiled and uploaded the code to the NXT.
 
 #### 3. Initializing the bluetooth communication between the NXT and the Arduino
 
-_apologies, this is still a work in progress. It should be finished by 26/09/2021._
+_apologies, this is still a work in progress. It should be finished by 01/11/2021._
 
 #### 4. Running the Code
 
-_apologies, this is still a work in progress. It should be finished by 26/09/2021._
+_apologies, this is still a work in progress. It should be finished by 01/11/2021._
